@@ -66,7 +66,7 @@ namespace MyProject.Repository
 
         public T Add(T entity)
         {
-            var ent = this._dataContext.Set<T>().Add(entity);
+            var ent = this.DataContext.Set<T>().Add(entity);
             this.Commit();
             return ent;
         }
@@ -101,12 +101,12 @@ namespace MyProject.Repository
         /// <remarks></remarks>
         public void Commit()
         {
-            this._dataContext.SaveChanges();
+            this.DataContext.SaveChanges();
         }
 
         public bool DatabaseExists()
         {
-            return this._dataContext.Database.Exists();
+            return this.DataContext.Database.Exists();
         }
 
         #region "IDisposable Support"
