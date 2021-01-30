@@ -1,4 +1,4 @@
-# GenericRepo
+# Generics Repo
 Generic database repository using EF 6.0
 
 ## Prerequisits
